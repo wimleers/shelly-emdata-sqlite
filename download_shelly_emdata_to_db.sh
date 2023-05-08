@@ -98,8 +98,8 @@ CREATE TABLE IF NOT EXISTS emdata (
 CREATE VIEW IF NOT EXISTS pvoutput AS
 SELECT
   timestamp,
-  strftime("%Y%m%d", timestamp, 'unixepoch') date,
-  time(timestamp, 'unixepoch') time,
+  strftime("%Y%m%d", timestamp, 'unixepoch', 'localtime') date,
+  time(timestamp, 'unixepoch', 'localtime') time,
   a_total_act_energy,
   b_total_act_energy,
   c_total_act_energy,
